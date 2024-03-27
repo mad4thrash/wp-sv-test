@@ -1,11 +1,14 @@
+import { WP_HOST,WP_DB, WP_PASS, WP_USER } from '$env/static/private';
 import mysql from 'mysql2/promise';
+
+
 
 // Dati di connessione al database
 const connectionData = {
-	host: '193.203.168.66',
-	user: 'u868057185_I8lXY',
-	password: 'PmJ34VSvNiS7qT7',
-	database: 'u868057185_l1qAJ'
+	host: WP_HOST,
+	user: WP_USER,
+	password: WP_PASS,
+	database: WP_DB
 };
 
 export async function getDBConnection() {
