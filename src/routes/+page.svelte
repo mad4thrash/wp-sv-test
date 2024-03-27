@@ -65,7 +65,7 @@
                 <tr>
                     <td class="border px-4 py-2">{order.id}</td>
                     <td class="border px-4 py-2">{order.billing_first_name} {order.billing_last_name}</td>
-                    <td class="border px-4 py-2">{order.total_amount}</td>
+                    <td class="border px-4 py-2">€ {order.total_amount.slice(0,7)}</td>
                     <td class="border px-4 py-2">{order.pb_total}</td>
                     <td class="border px-4 py-2">{order.cv_total}</td>
                     <td class="border px-4 py-2">
