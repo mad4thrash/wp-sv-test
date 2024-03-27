@@ -55,15 +55,19 @@
                 <th class="border px-4 py-2">Ordine</th>
                 <th class="border px-4 py-2">Cliente</th>
                 <th class="border px-4 py-2">Totale</th>
+                <th class="border px-4 py-2">PB</th>
+                <th class="border px-4 py-2">CV</th>
                 <th class="border px-4 py-2">Status</th>
             </tr>
         </thead>
         <tbody>
-            {#each data.body.posts as order}
+            {#each data.body.orders as order}
                 <tr>
                     <td class="border px-4 py-2">{order.id}</td>
                     <td class="border px-4 py-2">{order.billing_first_name} {order.billing_last_name}</td>
                     <td class="border px-4 py-2">{order.total_amount}</td>
+                    <td class="border px-4 py-2">{order.pb_total}</td>
+                    <td class="border px-4 py-2">{order.cv_total}</td>
                     <td class="border px-4 py-2">
                     {#if order.status === 'wc-completed'}
                         <span class="text-green-400
